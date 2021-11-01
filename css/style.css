@@ -26,6 +26,10 @@ h2 {
     margin: 10rem;
 }
 
+img {
+    box-shadow: 10px 5px 5px black;
+}
+
 p {
     color: #fff;
 }
@@ -34,17 +38,25 @@ p {
     display: none;
 }
 
+input {
+    height: 2.5rem;
+    width: 30rem;
+    margin: 1vh;
+}
+
 .order-btn {
     background-color: var(--yellow);
     font-size: 20px;
     border-radius: 30px;
     height: 57px;
     width: 216px;
-    align-items: center;
 }
 
 .order-btn:hover {
     cursor: pointer;
+    border: none;
+    font-size: 25px;
+    transition: ease 0.3s;
 }
 
 .current {
@@ -109,6 +121,7 @@ a {
 a:hover {
     text-decoration: underline;
     text-decoration-color: var(--yellow);
+    transition: 0.3s ease;
     color: #000;
     cursor: pointer;
 }
@@ -173,17 +186,21 @@ a:hover {
 .selected-game {
     display: flex;
     justify-content: space-evenly;
-    margin: 10vh;
+    margin: 10vh auto;
 }
 
 .selected-game-picture > img {
-    height: 70vh;
-    width: auto;
+    max-height: 30vh;
+    max-width: auto;
+}
+
+.selected-game > div {
+    max-width:  
 }
 
 .game-info {
     width: 45%;
-    margin-top: 0;
+    justify-content: space-between;
 }
 
 .game-info >h2 {
@@ -204,6 +221,7 @@ a:hover {
     background-color: var(--yellow);
     height: 30px;
     width: 150px;
+    font-size: 12px;
     border: none;
     border-radius: 20px 0 0 20px;
 }
@@ -212,8 +230,21 @@ a:hover {
     background-color: #34e629;
     height: 30px;
     width: 150px;
+    font-size: 12px;
     border: none;
     border-radius: 0 20px 20px 0;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease 0.3s;
+}
+
+.checkout-btn:hover {
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease 0.3s;
 }
 
 .game-selection > img {
@@ -238,6 +269,58 @@ a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 100px;
+}
+
+/*COMMUNITY-PAGE*/
+.rate-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rate-game img {
+    height: auto;
+    width: 40vw;
+    margin-bottom: 10vh;
+}
+
+.rate {
+    display: flex;
+}
+
+#comment-area {
+    display: block;
+    align-items: center;
+    margin: 10vh auto;
+    height: 20vh;
+    width: 50vw;
+    resize: none;
+}
+
+/*MY-ACCOUNT-PAGE*/
+form ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*SIGN-UP PAGE*/
+form {
+    margin: 10vh auto;
+    width: 500px;
+    border: 2px solid var(--yellow);
+    border-radius: 20px;
+    text-align: center;
+}
+
+form .order-btn {
+    text-align: center;
+    margin: 1vh auto;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
 }
 
 /*FOOTER*/
@@ -327,16 +410,34 @@ footer {
     }
     /*GAME-PAGE*/
     .selected-game {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        margin : 10vh auto;
+
+    }
+
+    .selected-game-picture {
+        margin: auto;
+    }
+
+    .game-selection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto;
     }
 
     .game-info {
         display: block;
+        margin: 10vh auto;
     }
 
     .stock {
         display: block;
+        margin-left: 0;
     }
+
+    /*SIGN-UP PAGE*/
 
     /*FOOTER*/
     footer {
