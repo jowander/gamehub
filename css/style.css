@@ -13,35 +13,42 @@
 /*GLOBAL*/
 body {
     background-color: var(--secondary);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
     display: block;
+    box-shadow: 10px 5px 5px black;
 }
 
-h2 {
+h2,h3{
     font-size: 72px;
     text-align: center;
     color: #fff;
     margin: 10rem;
 }
 
-img {
-    box-shadow: 10px 5px 5px black;
+h3 {
+    font-size: 40px;
+    margin: 10px auto;
 }
 
 p {
     color: #fff;
 }
 
-.selection {
-    display: none;
+a {
+    text-decoration: none;
 }
 
-input {
-    height: 2.5rem;
-    width: 30rem;
-    margin: 1vh;
+.current {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+}
+
+.selection {
+    display: none;
 }
 
 .order-btn {
@@ -56,13 +63,63 @@ input {
     cursor: pointer;
     border: none;
     font-size: 25px;
+    background-color: yellow;
     transition: ease 0.3s;
 }
 
-.current {
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: var(--yellow);
+.buy-now-btn {
+    background-color: var(--yellow);
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.buy-now-btn:hover {
+    font-size: 20px;
+    transition: ease 0.3s;
+    background-color: yellow;
+    border: none;
+}
+
+form {
+    max-width: 500px;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+form ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid var(--yellow);
+    border-radius: 20px;
+}
+
+form .order-btn {
+    margin: 2vh auto;
+}
+
+input {
+    width: 75%;
+    height: 30px;
+    margin-bottom: 1vh;
+}
+
+label {
+    display: block;
+}
+
+.desktop-logo {
+    width: 100%;
+    box-shadow: none;  
+}
+
+.fa-check {
+    color: #34e629;
+}
+
+.fa-times {
+    color: #ff0000;
 }
 
 /*HOME-PAGE*/
@@ -70,21 +127,6 @@ input {
 /*NAVIGATION*/
 header {
     background-color: var(--primarycolor);
-}
-
-.mobile-logo {
-    display: none;
-}
-
-.desktop-logo {
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.main-navigation {
-    display: flex;
 }
 
 .navigation {
@@ -99,8 +141,6 @@ header {
 }
 
 ul {
-    flex-grow: 1;
-    display: flex;
     list-style: none;
 }
 
@@ -109,7 +149,7 @@ li {
     font-size: 30px;
 }
 
-a {
+.nav {
     font-size: 25px;
     text-align: center;
     text-decoration: none;
@@ -118,7 +158,7 @@ a {
     color: #fff;
 }
 
-a:hover {
+.nav:hover {
     text-decoration: underline;
     text-decoration-color: var(--yellow);
     transition: 0.3s ease;
@@ -154,6 +194,9 @@ a:hover {
 }
 
 .catagory-btn:hover {
+    font-size: 30px;
+    transition: 0.3s ease;
+    background-color: yellow;
     cursor: pointer;
 }
 
@@ -161,15 +204,17 @@ a:hover {
 .preview {
     display: flex;
     justify-content: space-evenly;
+
 }
 
 .preview > div {
+    flex: 1;
     max-width: 500px;
+    flex-shrink: 1;
 }
 
 .preview img {
-    margin: auto;
-    max-height: 30rem;
+    width:100%;
 }
 
 .preview button {
@@ -189,26 +234,30 @@ a:hover {
     margin: 10vh auto;
 }
 
-.selected-game-picture > img {
-    max-height: 30vh;
-    max-width: auto;
+.selected-game-picture {
+    max-width: 500px;
 }
 
-.selected-game > div {
-    max-width:  
+.selected-game-picture > img {
+    width: 100%;
 }
 
 .game-info {
-    width: 45%;
+    max-width: 500px;
     justify-content: space-between;
 }
 
-.game-info >h2 {
+.game-info p {
+    width: 100%;
+}
+
+.game-info > h2 {
     text-align: left;
     margin: 0 0 5vh 0;
 }
 
 .stock {
+    max-width: 500px;
     display: flex;
     margin: 5vh;
 }
@@ -238,12 +287,14 @@ a:hover {
 .back-btn:hover {
     cursor: pointer;
     font-size: 20px;
+    background-color: yellow;
     transition: ease 0.3s;
 }
 
 .checkout-btn:hover {
     cursor: pointer;
     font-size: 20px;
+    background-color: greenyellow;
     transition: ease 0.3s;
 }
 
@@ -251,6 +302,11 @@ a:hover {
     width: auto;
     height: 30vh;
     margin: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .new-games {
@@ -263,6 +319,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 10vh;
 }
 .trade-games {
     display: flex;
@@ -298,47 +355,67 @@ a:hover {
 }
 
 /*MY-ACCOUNT-PAGE*/
-form ul {
+.upload {
+    margin: 1vh;
+    border: none;
+}
+
+/*MY-ACCOUNT-PAGE-TWO*/
+.summary {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-evenly;
 }
 
-/*SIGN-UP PAGE*/
-form {
-    margin: 10vh auto;
-    width: 500px;
-    border: 2px solid var(--yellow);
-    border-radius: 20px;
-    text-align: center;
+.buy-game {
+    max-width: 500px;
 }
 
-form .order-btn {
-    text-align: center;
-    margin: 1vh auto;
+.buy-game > img {
+    width: 100%;
 }
 
-.sign-up {
+.game-info-summary {
+    width: 50%;
+}
+
+.add-price {
     display: flex;
-    flex-direction: column;
+    text-align: right;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.price-name {
+    margin: 10px;
+}
+
+.price-number {
+    margin: 10px;
+}
+
+.check-stock {
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 5vh auto;
 }
 
 /*FOOTER*/
 footer {
     background-color: var(--primarycolor);
     display: grid;
-    justify-content: space-between;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "logo social contact copy";
+    grid-template-areas: "logo social contact copy3";
 }
 
-.logo {
+.logo-holder {
     grid-area: logo;
+
 }
 
 .copy {
-    grid-area: copy;
+    grid-area: copy3;
     margin-top: 5rem;
 }
 
@@ -347,18 +424,19 @@ footer {
     margin: 5rem 0 0 1rem;
 }
 
-.social-btn {
-    height: 1.5rem;
-    width: 6rem;
-}
-
-.social-btn:hover {
-    cursor: pointer;
-}
-
 .contact {
     grid-area: contact;
     margin-top: 2rem;
+}
+
+.social-btn {
+    max-height: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn:hover {
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .fab {
@@ -368,12 +446,8 @@ footer {
 /*MEDIA*/
 @media only screen and (max-width: 600px) {
     h2 {
-        font-size: 20px;
+        font-size: 40px;
         margin: 2rem;
-    }
-
-    .desktop-logo {
-        display: none;
     }
 
     .showcase {
@@ -395,29 +469,41 @@ footer {
     }
 
     .preview {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+        display: block;
     }
 
     .preview img {
-        height: 15rem;
+        width: 75%;
+        justify-content: space-evenly;
+        margin: 0 auto;
     }
 
     .nav-icons {
         display: flex;
         justify-content: space-around;
+        background-color: #000;
+    }
+
+    .nav-icons i{
+        color: #fff;
     }
     /*GAME-PAGE*/
     .selected-game {
         display: flex;
         flex-direction: column;
         margin : 10vh auto;
-
     }
 
     .selected-game-picture {
         margin: auto;
+    }
+
+    .selected-game-picture {
+        margin: auto;
+    }
+
+    .recommended-games {
+        margin: 0;
     }
 
     .game-selection {
@@ -427,9 +513,9 @@ footer {
         margin: auto;
     }
 
-    .game-info {
+    .game-info-summary {
         display: block;
-        margin: 10vh auto;
+        margin: 0 auto;
     }
 
     .stock {
@@ -438,17 +524,27 @@ footer {
     }
 
     /*SIGN-UP PAGE*/
+    .sign-up {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    /*MY-ACCOUNT-PAGE-TWO*/
+    .summary {
+        display: block;
+    }
 
     /*FOOTER*/
     footer {
         display: block;
     }
 
-    .mobile-logo {
-        display: flex;
-        flex-direction: column;
+    .main-navigation {
+        max-width: 600px;
+    }
+
+    .desktop-logo {
         text-align: center;
-        margin: 0 auto;
     }
 
     .contact {
@@ -456,6 +552,10 @@ footer {
     }
 
     .copy {
+        display: none;
+    }
+
+    .social {
         display: none;
     }
 

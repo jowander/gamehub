@@ -16,20 +16,15 @@
     <body>
         <header>
             <nav class="main-navigation">
-                <a class="desktop-logo" href="index.html"
-                    ><img src="img/gamehub_logo.png" alt="gamehub_logo"
-                /></a>
-                <a class="mobile-logo" href="index.html"
-                    ><img
-                        src="img/gamehub_logo_mobile.png"
-                        alt="gamehub_logo_mobile"
+                <a href="index.html"
+                    ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
                 /></a>
                 <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a class="current" href="my-account.html">My Account</a></li>
-                    <li><a href="sign-up.html">Sign Up</a></li>
+                    <li><a class="current nav" href="index.html">Home</a></li>
+                    <li><a class="nav" href="games.html">Games</a></li>
+                    <li><a class="nav" href="community.html">Community</a></li>
+                    <li><a class="nav" href="my-account.html">My Account</a></li>
+                    <li><a class="nav" href="sign-up.html">Sign Up</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,19 +33,18 @@
                 <h2>Sell your used games here</h2>
             </section>
             <section>
-                <form action="sell-old-game">
-                    <ul>
+                <form class="my-account-form form" action="sell-old-game">
+                    <ul class="sell-form">
                         <li><label for="your-game-title">Your game title: </label>
-                        <input type="text"></li>
+                        </li><li><input type="text"></li>
                         <li><label for="asking-price">Asking price: </label>
-                        <input type="text"></li>
+                        </li><li><input type="text"></li>
                         <li><label for="condition">Condition: </label>
-                        <input type="text"></li>
+                        </li><li><input type="text"></li>
                     </ul>
                     <div>
                         <ul class="upload">
                             <li><h3>Upload photos</h3></li>
-                            <li><label for="img">Select image:</label></li>
                             <li><button>Choose file  </button></li>
                             <li><button class="order-btn">Submit item</button></li>
                         </ul>
@@ -60,37 +54,62 @@
             <section>
                 <h2>Trade your used games here</h2>
             </section>
-            <form action="Trade-old-game">
+            <form class="my-account-form form" action="Trade-old-game">
                 <ul>
                     <li><label for="your-game-title">Your game title: </label>
-                    <input type="text"></li>
+                    </li><li><input type="text"></li>
                     <li><label for="asking-price">Asking price: </label>
-                    <input type="text"></li>
+                    </li><li><input type="text"></li>
                     <li><label for="condition">Condition: </label>
-                    <input type="text"></li>
+                    </li><li><input type="text"></li>
                 </ul>
                 <div>
                     <ul class="upload">
                         <li><h3>Upload photos</h3></li>
-                        <li><label for="img">Select image:</label></li>
                         <li><button>Choose file  </button></li>
                         <li><button class="order-btn">Submit item</button></li>
                     </ul>
                 </div>
             </form>
-        </section>   
+        </section>
+        <section>
+            <h2>Wishlist</h2>
+                <div class="recommended-games">
+                    <div class="game-selection">
+                        <img src="img/GameHub_covers.jpg" alt="game-cover" />
+                        <div class="price">
+                            <p>Ping Pong</p>
+                        </div>
+                    </div>
+                    <div class="game-selection">
+                        <img src="img/GameHub_covers.jpg" alt="game-cover" />
+                        <div class="price">
+                            <p>Ping Pong</p>
+                        </div>
+                    </div>
+                    <div class="game-selection">
+                        <img src="img/GameHub_covers.jpg" alt="game-cover" />
+                        <div class="price">
+                            <p>Ping Pong</p>
+                        </div>
+                    </div>
+                    <div class="game-selection">
+                        <img src="img/GameHub_covers.jpg" alt="game-cover" />
+                        <div class="price">
+                            <p>Ping Pong</p>
+                        </div>
+                    </div>
+                </div>
+        </section>  
         </main>
         <footer>
             <div class="social">
-                <button class="social-btn">
-                    Discord<i class="fab fa-discord"></i>
-                </button>
-                <button class="social-btn">
-                    Youtube<i class="fab fa-youtube"></i>
-                </button>
-                <button class="social-btn">
-                    Twitch<i class="fab fa-twitch"></i>
-                </button>
+                <ul>
+                    <li><a href="https://www.discord.com"><button class="social-btn">Discord<i class="fab fa-discord"></i></button></a></li>
+                    <li><a href="https://www.youtube.com"><button class="social-btn">Youtube<i class="fab fa-youtube"></i></button></a></li>
+                    <li><a href="https://www.twitch.com"><button class="social-btn">Twitch<i class="fab fa-twitch"></i></button></a></li>
+                </ul>
+            </div>
             </div>
             <div class="copy">
                 <p>Gamehub 2021 &copy;</p>
@@ -101,21 +120,16 @@
                 <p>Email:</p>
                 <p>Address:</p>
             </div>
-            <div>
-                <a class="desktop-logo" href="index.html"
-                    ><img src="img/gamehub_logo.png" alt="gamehub_logo"
-                /></a>
-                <a class="mobile-logo" href="index.html"
-                    ><img
-                        src="img/gamehub_logo_mobile.png"
-                        alt="gamehub_logo_mobile"
+            <div class="logo-holder">
+                <a href="index.html"
+                    ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
                 /></a>
             </div>
             <div class="mobile">
                 <ul class="nav-icons">
-                    <li><i class="fas fa-bars"></i></li>
-                    <li><i class="fas fa-shopping-cart"></i></li>
-                    <li><i class="fas fa-search"></i></li>
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                    <li><a href="my-account-two.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
                 </ul>
             </div>
         </footer>
