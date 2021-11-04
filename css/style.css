@@ -114,6 +114,11 @@ label {
     box-shadow: none;  
 }
 
+.fas {
+    color: #fff;
+    margin: 0 10px;
+}
+
 .fa-check {
     color: #34e629;
 }
@@ -211,6 +216,7 @@ li {
     flex: 1;
     max-width: 500px;
     flex-shrink: 1;
+    margin: 0 2vw;
 }
 
 .preview img {
@@ -245,10 +251,8 @@ li {
 .game-info {
     max-width: 500px;
     justify-content: space-between;
-}
-
-.game-info p {
-    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 2vw;
 }
 
 .game-info > h2 {
@@ -264,6 +268,10 @@ li {
 
 .stock > ul {
     margin-left: 15vw;
+}
+
+.rate-icons {
+    display: flex;
 }
 
 .back-btn {
@@ -319,7 +327,6 @@ li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10vh;
 }
 .trade-games {
     display: flex;
@@ -375,7 +382,7 @@ li {
 }
 
 .game-info-summary {
-    width: 50%;
+    max-width: 500px;
 }
 
 .add-price {
