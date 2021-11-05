@@ -14,6 +14,7 @@
 body {
     background-color: var(--secondary);
     font-family: Arial, Helvetica, sans-serif;
+    /* overflow-x: hidden; */
 }
 
 img {
@@ -21,11 +22,12 @@ img {
     box-shadow: 10px 5px 5px black;
 }
 
-h2,h3{
-    font-size: 72px;
+h2,
+h3 {
+    font-size: 64px;
     text-align: center;
     color: #fff;
-    margin: 10rem;
+    margin: 10vh auto;
 }
 
 h3 {
@@ -111,7 +113,7 @@ label {
 
 .desktop-logo {
     width: 100%;
-    box-shadow: none;  
+    box-shadow: none;
 }
 
 .fas {
@@ -134,11 +136,15 @@ header {
     background-color: var(--primarycolor);
 }
 
+.header  {
+    margin: 50px auto;
+}
+
 .navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;  
+    align-items: center;
 }
 
 .nav-icons {
@@ -216,7 +222,7 @@ li {
 }
 
 .preview img {
-    width:100%;
+    width: 100%;
 }
 
 .preview button {
@@ -233,11 +239,13 @@ li {
 .selected-game {
     display: flex;
     justify-content: space-evenly;
-    margin: 10vh auto;
+    margin: 10vh 5vw;
+    /* max-width: 1500px; */
 }
 
 .selected-game-picture {
     max-width: 500px;
+    flex: 1;
 }
 
 .selected-game-picture > img {
@@ -245,10 +253,12 @@ li {
 }
 
 .game-info {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin: 0 2vw;
+    flex: 1;
 }
 
 .game-info > h2 {
@@ -271,9 +281,10 @@ li {
 }
 
 .back-btn {
+    display: block;
     background-color: var(--yellow);
     height: 30px;
-    width: 150px;
+    max-width: 150px;
     font-size: 12px;
     border: none;
     border-radius: 20px 0 0 20px;
@@ -282,7 +293,7 @@ li {
 .checkout-btn {
     background-color: #34e629;
     height: 30px;
-    width: 150px;
+    max-width: 150px;
     font-size: 12px;
     border: none;
     border-radius: 0 20px 20px 0;
@@ -357,6 +368,11 @@ li {
     resize: none;
 }
 
+.community-button {
+    margin: 20px auto;
+    text-align: center;
+}
+
 /*MY-ACCOUNT-PAGE*/
 .upload {
     margin: 1vh;
@@ -366,11 +382,14 @@ li {
 /*MY-ACCOUNT-PAGE-TWO*/
 .summary {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
 }
 
 .buy-game {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
+    margin-right: 3vw;
 }
 
 .buy-game > img {
@@ -414,7 +433,6 @@ footer {
 
 .logo-holder {
     grid-area: logo;
-
 }
 
 .copy {
@@ -450,7 +468,6 @@ footer {
 @media only screen and (max-width: 600px) {
     h2 {
         font-size: 40px;
-        margin: 2rem;
     }
 
     .showcase {
@@ -487,14 +504,14 @@ footer {
         background-color: #000;
     }
 
-    .nav-icons i{
+    .nav-icons i {
         color: #fff;
     }
     /*GAME-PAGE*/
     .selected-game {
         display: flex;
         flex-direction: column;
-        margin : 10vh 5vw;
+        margin: 10vh 5vw;
     }
 
     .selected-game-picture {
