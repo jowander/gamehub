@@ -16,10 +16,10 @@
     </head>
     <body>
         <header>
-            <nav class="main-navigation">
-                <a href="index.html"
-                    ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
-                /></a>
+            <a href="index.html"><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"></a>
+            <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-hamburger"></i></label>
+            <input id="hamburger-menu" type="checkbox">
+            <nav>
                 <ul class="navigation">
                     <li><a class="nav" href="index.html">Home</a></li>
                     <li><a class="nav" href="games.html">Games</a></li>
@@ -34,7 +34,7 @@
                 <h2>Sell your used games here</h2>
             </section>
             <section>
-                <form class="my-account-form form" action="sell-old-game">
+                <form class="my-account-form form" method="get" action="my-account-two.html">
                     <ul class="sell-form">
                         <li><label for="your-game-title">Your game title: </label>
                         </li><li><input type="text"></li>
@@ -47,7 +47,7 @@
                         <ul class="upload">
                             <li><h3>Upload photos</h3></li>
                             <li><button>Choose file  </button></li>
-                            <li><button class="order-btn">Submit item</button></li>
+                            <li><button onclick="window.location.href='my-account-two.html'" class="order-btn">Submit item</button></li>
                         </ul>
                     </div>
                 </form>
@@ -55,7 +55,7 @@
             <section>
                 <h2>Trade your used games here</h2>
             </section>
-            <form class="my-account-form form" action="Trade-old-game">
+            <form class="my-account-form form" method="get" action="my-account-two.html">
                 <ul>
                     <li><label for="your-game-title">Your game title: </label>
                     </li><li><input type="text"></li>
@@ -68,7 +68,7 @@
                     <ul class="upload">
                         <li><h3>Upload photos</h3></li>
                         <li><button>Choose file  </button></li>
-                        <li><button class="order-btn">Submit item</button></li>
+                        <li><button  onclick="window.location.href='my-account-my-account-two.html'" class="order-btn">Submit item</button></li>
                     </ul>
                 </div>
             </form>
@@ -125,13 +125,6 @@
                 <a href="index.html"
                     ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
                 /></a>
-            </div>
-            <div class="mobile">
-                <ul class="nav-icons">
-                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
-                    <li><a href="my-account-two.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                </ul>
             </div>
         </footer>
     </body>

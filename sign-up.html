@@ -16,10 +16,10 @@
     </head>
     <body>
         <header>
-            <nav class="main-navigation">
-                <a href="index.html"
-                    ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
-                /></a>
+            <a href="index.html"><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"></a>
+            <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-hamburger"></i></label>
+            <input id="hamburger-menu" type="checkbox">
+            <nav>
                 <ul class="navigation">
                     <li><a class="nav" href="index.html">Home</a></li>
                     <li><a class="nav" href="games.html">Games</a></li>
@@ -32,14 +32,14 @@
         <main>
             <section class="sign-up">
                 <h2>Sign up</h2>
-                <form class="sign-up-form form" action="sign-up">
+                <form class="sign-up-form form" method="get" action="my-account.html">
                     <ul>
                         <li><label for="first-name">First name: </label><input type="text"></li>
                         <li><label for="last-name">Last name: </label><input type="text"></li>
                         <li><label for="email">Email: </label><input type="email"></li>
                         <li><label for="password">Password: </label><input type="password"></li>
                     </ul>
-                    <button class="order-btn">Create account</button>
+                    <button onclick="window.location.href='my-account.html'" class="order-btn">Create account</button>
                 </form>
             </section>  
         </main>
@@ -65,13 +65,6 @@
                 <a href="index.html"
                     ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
                 /></a>
-            </div>
-            <div class="mobile">
-                <ul class="nav-icons">
-                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
-                    <li><a href="my-account-two.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                </ul>
             </div>
         </footer>
     </body>

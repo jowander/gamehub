@@ -24,7 +24,7 @@ img {
 
 h2,
 h3 {
-    font-size: 64px;
+    font-size: 60px;
     text-align: center;
     color: #fff;
     margin: 10vh auto;
@@ -41,6 +41,15 @@ p {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: #fff;
+    font-size: 30px;
 }
 
 .current {
@@ -66,7 +75,7 @@ a {
     border: none;
     font-size: 25px;
     background-color: yellow;
-    transition: ease 0.3s;
+    transition: ease 300ms;
 }
 
 .buy-now-btn {
@@ -78,7 +87,7 @@ a {
 
 .buy-now-btn:hover {
     font-size: 20px;
-    transition: ease 0.3s;
+    transition: ease 300ms;
     background-color: yellow;
     border: none;
 }
@@ -111,6 +120,10 @@ label {
     display: block;
 }
 
+.logo {
+    max-width: 500px;
+}
+
 .desktop-logo {
     width: 100%;
     box-shadow: none;
@@ -133,45 +146,46 @@ label {
 
 /*NAVIGATION*/
 header {
-    background-color: var(--primarycolor);
+    background: var(--primarycolor);
+    width: 100%;
+
 }
 
-.header  {
-    margin: 50px auto;
+#hamburger-menu { 
+    display: none;
+}
+
+.hamburger-label {
+    display: none;
+}
+
+nav li {
+    display: block;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
 }
 
 .navigation {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
 }
 
-.nav-icons {
-    display: none;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    color: #fff;
-    font-size: 30px;
-}
-
-.nav {
-    font-size: 25px;
-    padding: 10px;
-    color: #fff;
-}
-
-.nav:hover {
+nav a:hover {
     text-decoration: underline;
     text-decoration-color: var(--yellow);
-    transition: 0.3s ease;
     color: #000;
-    cursor: pointer;
+    transition: 300ms;
+}
+
+.current {
+    font-weight: bold;
 }
 
 /*SHOWCASE*/
@@ -190,20 +204,21 @@ li {
 
 .catagory {
     list-style: none;
-    margin: 7rem 0 0 2rem;
+    margin: 20px;
 }
 
 .catagory-btn {
     background-color: var(--yellow);
     font-size: 20px;
     margin: 20px 0;
+    padding: 10px;
     height: 58px;
     width: 327px;
 }
 
 .catagory-btn:hover {
     font-size: 30px;
-    transition: 0.3s ease;
+    transition: 300ms ease;
     background-color: yellow;
     cursor: pointer;
 }
@@ -240,7 +255,6 @@ li {
     display: flex;
     justify-content: space-evenly;
     margin: 10vh 5vw;
-    /* max-width: 1500px; */
 }
 
 .selected-game-picture {
@@ -269,7 +283,6 @@ li {
 .stock {
     max-width: 500px;
     display: flex;
-    margin: 5vh;
 }
 
 .stock > ul {
@@ -280,11 +293,18 @@ li {
     display: flex;
 }
 
+.back-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 500px;
+}
+
 .back-btn {
     display: block;
     background-color: var(--yellow);
     height: 30px;
     max-width: 150px;
+    padding: 10px;
     font-size: 12px;
     border: none;
     border-radius: 20px 0 0 20px;
@@ -294,6 +314,7 @@ li {
     background-color: #34e629;
     height: 30px;
     max-width: 150px;
+    padding: 10px;
     font-size: 12px;
     border: none;
     border-radius: 0 20px 20px 0;
@@ -303,19 +324,18 @@ li {
     cursor: pointer;
     font-size: 20px;
     background-color: yellow;
-    transition: ease 0.3s;
+    transition: ease 300ms;
 }
 
 .checkout-btn:hover {
     cursor: pointer;
     font-size: 20px;
     background-color: greenyellow;
-    transition: ease 0.3s;
+    transition: ease 300ms;
 }
 
-.game-selection > img {
-    width: auto;
-    height: 30vh;
+.game-selection img {
+    max-width: 200px;
     margin: 20px;
 }
 
@@ -466,6 +486,53 @@ footer {
 
 /*MEDIA*/
 @media only screen and (max-width: 600px) {
+    /*NAVIGATION*/
+    header {
+        background: var(--primarycolor);
+        min-height: 100px;
+    }
+    
+    nav, #hamburger-menu {
+        display: none;
+    }
+    
+    nav ul {
+        padding: 0;
+    }
+    
+    nav li {
+        display: block;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--yellow);
+    }
+    
+    .current {
+        font-weight: bold;
+    }
+    /*HOME-PAGE*/
+    
+    .hamburger-label {
+        float: right;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.5em;
+        display: block;
+    }
+    
+    #hamburger-menu:checked ~ nav {
+        display: block;
+    }
+
     h2 {
         font-size: 40px;
     }
@@ -484,9 +551,9 @@ footer {
         align-items: center;
     }
 
-    .navigation {
-        display: none;
-    }
+     .navigation {
+        display: block;
+    } 
 
     .preview {
         display: block;
@@ -534,20 +601,50 @@ footer {
         margin: 0 auto;
     }
 
+    .game-info p {
+        text-align: left;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
     .stock {
         display: block;
         margin-left: 0;
     }
 
+    .rate-icons {
+        margin: 20px;
+    }
+
+    /*COMMUNITY-PAGE*/
+    .rate-game {
+        margin: 20px;
+    }
+
+    .rate-game img {
+        width: 100%;
+    }
+
     /*SIGN-UP PAGE*/
     .sign-up {
-        width: 75%;
-        margin: 0 auto;
+        margin: 20px;
     }
 
     /*MY-ACCOUNT-PAGE-TWO*/
     .summary {
         display: block;
+    }
+
+    .form {
+        margin: 20px;
+    }
+
+    .buy-game {
+        margin: 20px;
+    }
+
+    .game-info-summary {
+        margin: 20px;
     }
 
     /*FOOTER*/

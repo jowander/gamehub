@@ -16,10 +16,10 @@
     </head>
     <body>
         <header>
-            <nav class="main-navigation">
-                <a href="index.html"
-                    ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
-                /></a>
+            <a href="index.html"><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"></a>
+            <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-hamburger"></i></label>
+            <input id="hamburger-menu" type="checkbox">
+            <nav>
                 <ul class="navigation">
                     <li><a class="nav" href="index.html">Home</a></li>
                     <li><a class="nav" href="games.html">Games</a></li>
@@ -47,7 +47,7 @@
             <section>
                 <textarea name="comment" id="comment-area" cols="30" rows="10">Leave your comment...</textarea>
                 <div class="community-button">
-                    <button class="order-btn">Submit</button>
+                    <button  onclick="window.location.href='index.html'" class="order-btn">Submit</button>
                 </div>
             </section>
         </main>
@@ -73,13 +73,6 @@
                 <a href="index.html"
                     ><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"
                 /></a>
-            </div>
-            <div class="mobile">
-                <ul class="nav-icons">
-                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
-                    <li><a href="my-account-two.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#"><i class="fas fa-search"></i></a></li>
-                </ul>
             </div>
         </footer>
     </body>
