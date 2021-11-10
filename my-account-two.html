@@ -5,18 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Gamehub my-account-two page">
-        <link rel="stylesheet" href="css/style.css" />
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
             crossorigin="anonymous"
         />
-        <title>Gamehub|My-account</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Gamehub | My-account</title>
     </head>
     <body>
         <header>
-            <a href="index.html"><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"></a>
+            <div class="logo">
+                <a href="index.html"><img class="desktop-logo" src="img/gamehub_logo.png" alt="gamehub_logo"></a>
+            </div>
             <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-hamburger"></i></label>
             <input id="hamburger-menu" type="checkbox">
             <nav>
@@ -85,7 +87,7 @@
                     </form>
             </section>
             <section> 
-                <form class="billing-form form" action="billing-form">
+                <form class="billing-form form" method="get" action="checkout.html">
                     <h3>Billing Information</h3>
                     <ul>
                         <li><label for="cardholder-name">Cardholder name:</label><input type="text"></li>
@@ -94,7 +96,7 @@
                         <li><label for="CCV">CCV:</label><input type="text"></li>
                         <li><label for="postal">Expiary date:</label><input type="text"></li>
                     </ul>
-                    <a href="#"><button class="order-btn">Submit</button></a>
+                    <a href="#"><button onclick="window.location.href='checkout.html'" class="order-btn">Submit</button></a>
                 </form>
                 
             </section>

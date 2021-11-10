@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Gamehub checkout page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Gamehub community page">
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -12,7 +12,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Gamehub | Community</title>
+        <title>Gamehub | Checkout</title>
     </head>
     <body>
         <header>
@@ -25,31 +25,34 @@
                 <ul class="navigation">
                     <li><a class="nav" href="index.html">Home</a></li>
                     <li><a class="nav" href="games.html">Games</a></li>
-                    <li><a class="current" href="community.html">Community</a></li>
-                    <li><a class="nav" href="my-account.html">My Account</a></li>
+                    <li><a class="nav" href="community.html">Community</a></li>
+                    <li><a class="current" href="my-account.html">My Account</a></li>
                     <li><a class="nav" href="sign-up.html">Sign Up</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section>
-                <h2>Comment and rate for your fellow gamer</h2>
-            </section>
-            <section class="rate-game">
-                <img src="img/GameHub_covers8.jpg" alt="gamep-picture">
-                <div class="rate">
-                    <p>Rating: </p>
-                    <p><i class="far fa-star"></i></p>
-                    <p><i class="far fa-star"></i></p>
-                    <p><i class="far fa-star"></i></p>
-                    <p><i class="far fa-star"></i></p>
-                    <p><i class="far fa-star"></i></p>
+                <div class="checkout-text">
+                    <h2 class="checkout">Thank you for shopping with us</h2>
+                    <p class="checkout">Your order will be shipped from us within 24 hours</p>
                 </div>
-            </section>
-            <section>
-                <textarea name="comment" id="comment-area" cols="30" rows="10">Leave your comment...</textarea>
-                <div class="community-button">
-                    <button  onclick="window.location.href='index.html'" class="order-btn">Submit</button>
+                <div class="checkout-order">
+                    <div class="checkout-picture">
+                        <img src="img/GameHub_covers2.jpg" alt="game-picture" />
+                    </div>
+                    <div class="checkout-add-price">
+                        <div class=" price-name-total total">
+                            <p class="price-name">Price:</p>
+                            <p class="price-name">Shipping:</p>
+                            <p class="price-name">Total:</p>
+                        </div>
+                        <div class="price-number-total total">
+                            <p class="price-number">35$</p>
+                            <p class="price-number">2.99$</p>
+                            <p class="price-number">37.99$</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

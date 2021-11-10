@@ -5,21 +5,22 @@
 }
 
 :root {
-    --primarycolor: #69188f;
+    --primarycolor: #69178f;
     --secondary: #a312e6;
     --yellow: #e6cd29;
+    --green: #34e629;
 }
 
 /*GLOBAL*/
 body {
     background-color: var(--secondary);
     font-family: Arial, Helvetica, sans-serif;
-    /* overflow-x: hidden; */
 }
 
 img {
     display: block;
     box-shadow: 10px 5px 5px black;
+    margin-bottom: 20px;
 }
 
 h2,
@@ -28,11 +29,6 @@ h3 {
     text-align: center;
     color: #fff;
     margin: 10vh auto;
-}
-
-h3 {
-    font-size: 40px;
-    margin: 10px auto;
 }
 
 p {
@@ -67,7 +63,7 @@ li {
     font-size: 20px;
     border-radius: 30px;
     height: 57px;
-    width: 216px;
+    width: 150px;
 }
 
 .order-btn:hover {
@@ -135,7 +131,7 @@ label {
 }
 
 .fa-check {
-    color: #34e629;
+    color: var(--green);
 }
 
 .fa-times {
@@ -148,7 +144,6 @@ label {
 header {
     background: var(--primarycolor);
     width: 100%;
-
 }
 
 #hamburger-menu { 
@@ -156,6 +151,7 @@ header {
 }
 
 .hamburger-label {
+    cursor: pointer;
     display: none;
 }
 
@@ -311,7 +307,7 @@ nav a:hover {
 }
 
 .checkout-btn {
-    background-color: #34e629;
+    background-color: var(--green);
     height: 30px;
     max-width: 150px;
     padding: 10px;
@@ -354,6 +350,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 .trade-games {
     display: flex;
@@ -443,6 +440,39 @@ nav a:hover {
     margin: 5vh auto;
 }
 
+/*CHECKOUT-PAGE*/
+.checkout-text {
+    text-align: center;
+}
+
+.checkout {
+    animation: neon 500ms infinite alternate;
+    color: #eee;
+}
+
+.checkout-picture {
+    max-width: 500px;
+    margin: 20px 20px;
+}
+
+.checkout-picture > img {
+    width: 100%;
+}
+
+.checkout-order {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px auto;
+}
+
+.checkout-add-price {
+    display: flex;
+    text-align: right;
+    margin: auto 0;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
 /*FOOTER*/
 footer {
     background-color: var(--primarycolor);
@@ -483,6 +513,29 @@ footer {
 .fab {
     margin-left: 1rem;
 }
+
+/*KEYFRAMES*/
+@keyframes neon {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        
+        text-shadow:
+        2px 5px 7px #e56717,
+        2px 5px 14px #e56717,
+        2px 5px 22px #e56717,
+        2px 5px 44px #e56717,
+        2px 5px 88px #c35817,
+        2px 5px 100px #c35817,
+        2px 5px 120px #c35817,
+        2px 5px 170px #c35817,
+        2px 5px 200px #000;
+    
+    }
+    
+    15%, 25%, 44%, 75%, 99% {        
+        text-shadow: none;
+    }    
+  }
 
 /*MEDIA*/
 @media only screen and (max-width: 600px) {
@@ -647,9 +700,19 @@ footer {
         margin: 20px;
     }
 
+    /*CHECKOUT-PAGE*/
+    .checkout-order {
+        display: block;
+    }
+
+    .checkout-add-price {
+        justify-content: center;
+    }
+
     /*FOOTER*/
     footer {
         display: block;
+        text-align: center;
     }
 
     .main-navigation {
@@ -658,21 +721,5 @@ footer {
 
     .desktop-logo {
         text-align: center;
-    }
-
-    .contact {
-        display: none;
-    }
-
-    .copy {
-        display: none;
-    }
-
-    .social {
-        display: none;
-    }
-
-    .social-btn {
-        display: none;
     }
 }
