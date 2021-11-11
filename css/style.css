@@ -9,6 +9,7 @@
     --secondary: #a312e6;
     --yellow: #e6cd29;
     --green: #34e629;
+
 }
 
 /*GLOBAL*/
@@ -396,6 +397,22 @@ nav a:hover {
     border: none;
 }
 
+.choose-btn {
+    background-color: #000;
+    color: var(--yellow);
+    font-size: 20px;
+    border-radius: 30px;
+    height: 57px;
+    width: 150px;
+}
+
+.choose-btn:hover {
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    transition: ease 300ms;
+}
+
 /*MY-ACCOUNT-PAGE-TWO*/
 .summary {
     display: flex;
@@ -520,16 +537,14 @@ footer {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
         
         text-shadow:
-        2px 5px 7px #e56717,
-        2px 5px 14px #e56717,
-        2px 5px 22px #e56717,
-        2px 5px 44px #e56717,
-        2px 5px 88px #c35817,
-        2px 5px 100px #c35817,
-        2px 5px 120px #c35817,
-        2px 5px 170px #c35817,
-        2px 5px 200px #000;
-    
+        2px 5px 7px var(--green),
+        2px 5px 14px var(--green),
+        2px 5px 22px var(--green),
+        2px 5px 44px var(--green),
+        2px 5px 88px #378805,
+        2px 5px 100px #378805,
+        2px 5px 120px #378805,
+        2px 5px 170px #378805;
     }
     
     15%, 25%, 44%, 75%, 99% {        
@@ -586,7 +601,7 @@ footer {
         display: block;
     }
 
-    h2 {
+    h2, h3 {
         font-size: 40px;
     }
 
