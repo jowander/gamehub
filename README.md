@@ -14,7 +14,7 @@ You can add some bullet points if you'd like to:
 * I would like to add form validation
 
 Built With
-You can list a the tech stack that you've used over here
+
 HTML
 Css
 
